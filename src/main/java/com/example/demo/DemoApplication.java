@@ -16,6 +16,14 @@ public class DemoApplication {
 
 	@GetMapping("/hello")
 	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
+		String pippo="ciao";
+
+		if("ciao".equals(pippo))
+			pippo = "if 1";
+		if("ciao".equals(pippo))
+			pippo = "if 2";
+		if("ciao".equals(pippo))
+			pippo = "if 3";
 		return String.format("Hello %s!", name);
 	}
 
